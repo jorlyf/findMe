@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Разместить анкету
+{% endblock %}
+
+{% block body %}
+<div class="MainIndexText">
+    <h2 class="MainText">Размещение анкеты</h2>
+</div>
+
+{% for msg in get_flashed_messages() %}
+<div class="alert alert-primary flashMSG" role="alert">
+    <p class=centermsg>{{msg}}</p>
+</div>
+{% endfor %}
+
+{% if condition %}
+<div class='addPostForm'>
+    <form action="" method="post" novalidate enctype="multipart/form-data">
+
+        {{ form.hidden_tag() }}
+
+        <div class='addHeadForm'>
+            {{ form.head(placeholder='* Заголовок *') }}
+        </div>
+
+        <div class='addDescriptionForm'>
+            {{ form.description(class='inputForm', placeholder='* Описание *') }}
+        </div>
+        
+        <div class='containerBox'>
+
+            <div class='iconContainer'>
+                <div class='vk'>
+                    <image src='/static/images/vkIcon.png' width=32, height=32>
+                    {{ form.vk(class="addVkForm", placeholder='Ваш ВК') }}
+                </div>
+
+                <div>
+                    <image src='/static/images/instagramIcon.png' width=32, height=32></image>
+                    {{ form.instagram(class="addInstagramForm", placeholder='Ваш инстаграм') }}
+                </div>
+
+                <div>
+                    <image src='static/images/otherIcon.png' width=32, height=32>
+                    {{ form.otherContacts(class="addOtherContactsForm", placeholder='other') }}
+                </div>
+            </div>
+
+            <div class='addImageForm'>
+                {{ form.image(class="addImageForm", placeholder='Фото') }}
+            </div>
+
+        </div>
+
+        <div class='submitBtn'>
+            {{ form.submit(class="btn btn-success") }}
+        </div>
+        
+    </form>
+</div> 
+{% endif %}
+
+{% endblock %}

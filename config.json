@@ -1,0 +1,10 @@
+{
+  "sqlLogin": {
+    "login": "root",
+    "pass": "psw"
+  },
+
+  "settings": {
+    "COUNT_POSTS": 12
+  }
+}

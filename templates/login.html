@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Войти
+{% endblock %}
+
+{% block body %}
+
+<div>
+    {% for msg in get_flashed_messages() %}
+    <div class="alert alert-primary flashMSG" role="alert">{{msg}}</div>
+    {% endfor %}
+
+    <div class="AuthenficationPage">
+        <h1 class="AuthenficationText">Войти в аккаунт</h1>
+
+        <form action="" method="post" novalidate>
+
+            {{ form.hidden_tag() }}
+            <div class="mb-3">
+                {{ form.username(class="form-control", placeholder='Логин') }}
+            </div>
+
+            <div class="mb-3">
+                {{ form.password(class="form-control", placeholder='Пароль') }}
+            </div>
+
+            <div class="mb-3">
+                {{ form.submit(class="form-control") }}
+            </div>
+
+        </form>
+        <a href="register">Зарегистрироваться</a>
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Регистрация
+{% endblock %}
+
+{% block body %}
+
+<div>
+
+    {% for msg in get_flashed_messages() %}
+    <div class = "alert alert-primary" role="alert">{{msg}}</div>
+    {% endfor %}
+
+    <div class="AuthenficationPage">
+        <h1 class="AuthenficationText">Регистрация</h1>
+        <form action="" method="post">
+            
+            {{ form.hidden_tag() }}
+            <div class="mb-3">
+                {{ form.email(class="form-control", placeholder='@Email') }}
+            </div>
+
+            <div class="mb-3">
+                {{ form.username(class="form-control", placeholder='Логин') }}
+            </div>
+
+            <div class="mb-3">
+                {{ form.password(class="form-control", placeholder='Пароль') }}
+            </div>
+
+            <div class="mb-3">
+                {{ form.submit(class="form-control") }}
+            </div>
+            
+        </form>
+        <a href="login">Аккаунт уже есть</a>
+    </div>
+
+</div>
+
+{% endblock %}

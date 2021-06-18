@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Домашняя страница
+{% endblock %}
+
+{% block body %}
+
+<div class="MainIndexText">
+    <h3 class="MainText">
+        Данный проект был создан для того, чтоб любой
+        желающий мог разместить анкету для поиска кого-либо
+    </h3>
+
+    <div id='posts'></div>
+
+    <script src="../static/js/deletePost.js"></script>
+    <script src="../static/js/indexPosts.js"></script>
+
+</div>
+
+{% endblock %}
