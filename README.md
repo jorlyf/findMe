@@ -1,1 +1,1 @@
-it is first project. I haven't documentation for this
+Install MySQL and set config. Run app.py.
