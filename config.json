@@ -1,7 +1,8 @@
 {
   "sqlLogin": {
     "login": "root",
-    "pass": "psw"
+    "pass": "psw",
+    "dbName": "findme"
   },
 
   "settings": {

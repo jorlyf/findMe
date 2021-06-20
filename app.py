@@ -19,8 +19,8 @@ pymysql.install_as_MySQLdb()
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['SQLALCHEMY_DATABASE_URI'] = "mysql://{us}:{psw}@localhost/findme".format(
-    psw=config['sqlLogin']['pass'], us=config['sqlLogin']['login'])
+app.config['SQLALCHEMY_DATABASE_URI'] = "mysql://{us}:{psw}@localhost/{dbName}".format(
+    psw=config['sqlLogin']['pass'], us=config['sqlLogin']['login'], dbName=config['sqlLogin']['dbName'])
 
 
 app.config['SECRET_KEY'] = '$wf@@6QyxLo0PHpLq#4pEvTc7brcE%D#3E~RL|SOI$|Z1qn'
